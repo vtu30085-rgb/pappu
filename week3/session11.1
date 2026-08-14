@@ -1,0 +1,38 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Current Date
+        LocalDate date = LocalDate.now();
+        System.out.println("Current Date: " + date);
+
+        // Current Time
+        LocalTime time = LocalTime.now();
+        System.out.println("Current Time: " + time);
+
+        // Current Date and Time
+        LocalDateTime dateTime = LocalDateTime.now();
+        System.out.println("Current Date and Time: " + dateTime);
+
+        // Get Date Details
+        System.out.println("Year: " + date.getYear());
+        System.out.println("Month: " + date.getMonth());
+        System.out.println("Day: " + date.getDayOfMonth());
+
+        // Add days
+        System.out.println("After 5 days: " + date.plusDays(5));
+
+        // Subtract days
+        System.out.println("Before 5 days: " + date.minusDays(5));
+
+        // Format Date
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        System.out.println("Formatted Date: " + date.format(formatter));
+    }
+}
