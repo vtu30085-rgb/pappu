@@ -1,0 +1,30 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Deque<Integer> deque = new ArrayDeque<>();
+
+        // Add elements
+        deque.addFirst(10);
+        deque.addLast(20);
+        deque.addFirst(5);
+        deque.addLast(30);
+
+        System.out.println("Deque: " + deque);
+
+        // Remove from front
+        System.out.println("Removed first: " + deque.removeFirst());
+
+        // Remove from back
+        System.out.println("Removed last: " + deque.removeLast());
+
+        // View first and last
+        System.out.println("First element: " + deque.peekFirst());
+        System.out.println("Last element: " + deque.peekLast());
+
+        // Final deque
+        System.out.println("Final Deque: " + deque);
+    }
+}
