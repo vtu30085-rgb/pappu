@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static int largestAltitude(int[] gain) {
+        int altitude = 0;
+        int maxAltitude = 0;
+
+        for (int g : gain) {
+            altitude += g;
+            maxAltitude = Math.max(maxAltitude, altitude);
+        }
+
+        return maxAltitude;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Enter number of elements
+        int n = sc.nextInt();
+
+        int[] gain = new int[n];
+
+        // Enter altitude gains
+        for (int i = 0; i < n; i++) {
+            gain[i] = sc.nextInt();
+        }
+
+        // Find highest altitude
+        int result = largestAltitude(gain);
+
+        System.out.println("Highest Altitude: " + result);
+
+        sc.close();
+    }
+}
