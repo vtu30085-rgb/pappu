@@ -1,0 +1,27 @@
+import java.util.PriorityQueue;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Create Priority Queue
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        // Add elements
+        pq.add(30);
+        pq.add(10);
+        pq.add(20);
+        pq.add(5);
+
+        System.out.println("Priority Queue: " + pq);
+
+        // View highest priority element
+        System.out.println("Top element: " + pq.peek());
+
+        // Remove elements
+        System.out.println("Removed: " + pq.poll());
+        System.out.println("Removed: " + pq.poll());
+
+        // Remaining elements
+        System.out.println("Priority Queue after removal: " + pq);
+    }
+}
